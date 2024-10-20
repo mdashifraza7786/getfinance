@@ -46,5 +46,3 @@ def get_stock_prices():
     # Return the stock prices as a JSON response
     return jsonify(stock_prices)
 
-if __name__ == '__main__':
-    app.run(debug=True)
