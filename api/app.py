@@ -28,7 +28,7 @@ def fetch_stock_price(stock_url):
 def get_stock_prices():
     # URLs of the Google Finance pages
     urls = {
-        "AREM": "https://www.google.com/finance/quote/ARE%26M:NSE",
+        "ARE&M": "https://www.google.com/finance/quote/ARE%26M:NSE",
         "TATAMOTORS": "https://www.google.com/finance/quote/TATAMOTORS:NSE"
     }
 
@@ -46,3 +46,6 @@ def get_stock_prices():
     # Return the stock prices as a JSON response
     return jsonify(stock_prices)
 
+# Check if the app is running in a serverless environment
+if __name__ == '__main__':
+    app.run()
