@@ -1,9 +1,11 @@
 from flask import Flask, jsonify
 import requests
 from bs4 import BeautifulSoup
+from flask_cors import CORS
 
 app = Flask(__name__)
- 
+CORS(app)  # Enable CORS for the whole app
+
 def fetch_stock_price(stock_url):
     response = requests.get(stock_url)
 
